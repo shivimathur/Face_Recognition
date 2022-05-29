@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <meta charset="utf-8">
+    <title>Quaerere</title>
+</head>
+
+<body style="background-color : #c4eee8">
+    <div class="header">
+        <p class="heading"> Quaerere</p>
+    </div>
+    <div class="float-container">
+        <div class="float-child">
+            <div class="index_content">
+                <table>
+                    <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                    <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+                    <tr> 
+                        <td class="text"> Search for a missing person through a picture </td>
+                        <td> <a href="{{ url_for('predict_image') }}" ><img src="{{ url_for('static', filename='images/upload.png') }}" title="upload here" class="icons"> </a> </td>
+                    </tr>
+
+                    <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+                    <tr> 
+                        <td class="text"> Search for a missing person through a video </td>
+                        <td> <a href="{{ url_for('predict_video') }}" ><img src="{{ url_for('static', filename='images/upload.png') }}" title="upload here" class="icons"> </a> </td>
+                    </tr>
+
+                    <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                    
+                    <tr>
+                        <td> <a href="{{ url_for('logout')}}" style="text-decoration: none"> Logout </a></td>
+                    </tr>
+
+                </table>    
+            </div>
+        </div>
+        <div class="float-child">
+            <div style="width:100%; height:450px;">
+            <img src="{{url_for('static', filename='images/collage.png')}}" width="500" height="400">
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

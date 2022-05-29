@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <meta charset="utf-8">
+    <title>Quaerere</title>
+</head>
+
+<body style="background-color : #c4eee8">
+    <div class="header">
+        <p class="heading"> Quaerere</p>
+    </div>
+
+    <div class="search_image_box">
+        <table>
+            <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+            <form action="search_via_picture" method="post" enctype="multipart/form-data">                              
+                <tr>
+                    <td style="margin-left: 15px;"> <label for="dataset">Image</label> </td>
+                    <td  style="margin-left: 15px;"> <input type="file" id="dataset" name="dataset" accept="image/png, image/jpeg">
+                </tr>
+
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+                <td colspan="2" align="center"> <button type="submit"> Submit </button> </td>
+            </form>
+        </table>
+    </div>
+
+    <p align="center">Detected person: {{ person_name }}</p>
+</body>
+</html>

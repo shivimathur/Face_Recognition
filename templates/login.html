@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <meta charset="utf-8">
+    <title>Quaerere</title>
+</head>
+
+<body style="background-color : #c4eee8">
+    <div class="header">
+        <p class="heading"> Quaerere</p>
+    </div>
+    <div class="float-container">
+        <div class="float-child">
+            <div class="main_box">
+                <div class="authentication">
+                    <p class="heading"> Authentication </p>
+                </div>
+        
+                <form action="login" method="post" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <td> <label for="unique_number" style="font-size: 20px; color: white;"> Unique Identification Number : </label> </td>
+                            <td> <input type="text" id="unique_number" name="unique_number" value="{{
+                                request.form.unique_number }}"></input> </td>
+                        </tr>
+                        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                        <tr>
+                            <td> <label for="pin" style="font-size: 20px; color: white;"> Pin : </label> </td>
+                            <td> <input type="text" id="pin" name="pin" value="{{
+                                request.form.pin }}"></input> </td>
+                        </tr>
+                        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                        <tr>
+                            <td colspan="2" align="center"> <button type="submit"> Login </button> </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <p align="center">{{ error}}</p>
+        </div>
+        <div class="float-child">
+            <div style="width:100%; height:450px;">
+                <img src="{{url_for('static', filename='images/collage.png')}}" width="500" height="400">
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+
+</html>

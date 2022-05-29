@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <meta charset="utf-8">
+    <title>Quaerere</title>
+</head>
+
+<body style="background-color : #c4eee8">
+    <div class="header">
+        <p class="heading"> Quaerere</p>
+    </div>
+
+    <div class="search_video_box">
+        <table>
+            <form action="search_via_video" method="post" enctype="multipart/form-data">                              
+            <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td> <label for="names">Name</label> </td>
+                    <td> <input type="text" id="names" name="names">
+                </tr>
+            </tr>              
+            <tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td> <label for="video">Video</label> </td>
+                    <td> <input type="file" id="video" name="video">
+                </tr>
+            </tr>
+
+            <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+            <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+            <td colspan="2" align="center"> <button type="submit"> Submit </button> </td>
+            </form>
+        </table>
+    </div>
+    <p align="center">Is the above person present in the video?: {{ answer }}</p>
+</body>
+</html>
